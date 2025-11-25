@@ -21,7 +21,7 @@ class Config:
     )
 
     # Discord Configuration
-    DISCORD_WEBHOOK_URL: Optional[str] = os.getenv("DISCORD_WEBHOOK_URL")
+    DISCORD_WEBHOOK_URL: str = os.environ["DISCORD_WEBHOOK_URL"]
 
     # App Configuration
     FLASK_ENV: str = cast(str, os.getenv("FLASK_ENV", "production"))
