@@ -1,0 +1,18 @@
+[project]
+name = "sre-alert-multi"
+version = "0.0.0"
+
+[tool.semantic_release]
+branch = "main"
+commit_parser = "conventional"
+tag_format = "v{version}"
+version_toml = ["pyproject.toml:project.version"]
+
+[tool.semantic_release.commit_parser_options]
+ignore_merge_commits = true
+minor_tags = ["feat"]
+parse_squash_commits = true
+patch_tags = ["fix", "perf"]
+
+[tool.semantic_release.remote]
+type = "github"
