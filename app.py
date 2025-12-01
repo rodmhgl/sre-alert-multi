@@ -101,7 +101,7 @@ def receive_alert():
         assert isinstance(alert_data, dict)
 
         # Log the received alert data for debugging purposes
-        app.logger.info(f"Received alert: {alert_data}")
+        app.logger.info(f"Alert received: {alert_data}")
 
         # Use fallback manager for robust AI analysis
         # fallback_manager = FallbackManager()
